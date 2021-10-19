@@ -18,7 +18,11 @@ class Player
         end
 
         def attacks(player)
-
+            puts "#{@name} attacks #{player.name}."
+            damage_inflicted = compute_damage
+            player.gets_damage(damage_inflicted)
+            if player.life_points > 0
+            puts "The player #{@name} inflicts #{damage_inflicted} damages."
         end
 
         def compute_damage
